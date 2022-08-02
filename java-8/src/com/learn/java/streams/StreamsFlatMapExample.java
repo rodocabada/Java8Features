@@ -17,9 +17,9 @@ public class StreamsFlatMapExample {
     }
 
     public static List<String> printActivities() {
-       return StudentDataBase.getAllStudents().stream() //Stream<Student>
+        return StudentDataBase.getAllStudents().stream() //Stream<Student>
                 .map(Student::getActivities) //Stream<List<String>>
-               .flatMap(List::stream) //Stream<String>
+                .flatMap(List::stream) //Stream<String>
                 .collect(Collectors.toList());
     }
 
